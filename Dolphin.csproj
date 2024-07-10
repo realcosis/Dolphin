@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<OutputType>Exe</OutputType>
+		<LangVersion>latest</LangVersion>
+		<TargetFramework>net8.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<RootNamespace>Dolphin</RootNamespace>
+		<ApplicationIcon>dolphin.ico</ApplicationIcon>
+		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="AutoMapper" Version="13.0.1" />
+		<PackageReference Include="DotNetty.Buffers" Version="0.7.6" />
+		<PackageReference Include="DotNetty.Codecs" Version="0.7.6" />
+		<PackageReference Include="DotNetty.Codecs.Http" Version="0.7.6" />
+		<PackageReference Include="DotNetty.Common" Version="0.7.6" />
+		<PackageReference Include="DotNetty.Handlers" Version="0.7.6" />
+		<PackageReference Include="DotNetty.Transport" Version="0.7.6" />
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+		<PackageReference Include="RealCosis.Common" Version="2.0.2" />
+		<PackageReference Include="RealCosis.Common.DAL" Version="2.0.3" />
+		<PackageReference Include="EFCore.NamingConventions" Version="8.0.3" />
+		<PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="8.0.1" />
+		<PackageReference Include="Microsoft.Extensions.Logging.Console" Version="8.0.0" />
+		<PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.0" />
+		<PackageReference Include="SkiaSharp" Version="2.88.8" />
+		<PackageReference Include="SkiaSharp.NativeAssets.Linux.NoDependencies" Version="2.88.8" />
+	</ItemGroup>
+
+</Project>
