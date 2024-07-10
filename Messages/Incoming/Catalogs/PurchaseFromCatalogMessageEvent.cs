@@ -4,7 +4,7 @@ using Dolphin.Messages.Handler;
 using Dolphin.Messages.Outgoing.Inventory.Purse;
 using Dolphin.Messages.Outgoing.Notifications;
 using Dolphin.Networking.Client;
-using RC.Common.Injection;
+using Dolphin.Injection;
 
 namespace Dolphin.Messages.Incoming.Catalogs
 {

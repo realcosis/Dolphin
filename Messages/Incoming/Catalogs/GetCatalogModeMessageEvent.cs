@@ -1,8 +1,8 @@
 ﻿using Dolphin.HabboHotel.Catalogs;
 using Dolphin.Messages.Handler;
 using Dolphin.Networking.Client;
-using Dolphin.Outgoing.Catalogs;
-using RC.Common.Injection;
+using Dolphin.Messages.Outgoing.Catalogs;
+using Dolphin.Injection;
 
 namespace Dolphin.Messages.Incoming.Catalogs
 {

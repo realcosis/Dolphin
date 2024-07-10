@@ -1,6 +1,5 @@
+using Dolphin.Injection;
 using Microsoft.Extensions.Logging;
-using RC.Common;
-using RC.Common.Injection;
 
 namespace Dolphin.Core
 {

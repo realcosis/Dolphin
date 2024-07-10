@@ -1,7 +1,7 @@
 ﻿using Dolphin.DAL;
 using Dolphin.DAL.Entities;
 using Microsoft.EntityFrameworkCore;
-using RC.Common.Injection;
+using Dolphin.Injection;
 
 namespace Dolphin.Backgrounds.Tasks
 {

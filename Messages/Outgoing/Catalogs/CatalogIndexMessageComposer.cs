@@ -3,7 +3,7 @@ using Dolphin.Messages.Handler;
 using Dolphin.Messages.Outgoing;
 using Dolphin.Networking.Client;
 
-namespace Dolphin.Outgoing.Catalogs
+namespace Dolphin.Messages.Outgoing.Catalogs
 {
     public class CatalogIndexMessageComposer(ClientSession session, List<CatalogPage> pages) : OutgoingHandler(ServerPacketCode.CatalogIndexMessageComposer)
     {

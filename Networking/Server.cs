@@ -5,7 +5,7 @@ using DotNetty.Transport.Channels;
 using DotNetty.Transport.Channels.Sockets;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
-using RC.Common.Injection;
+using Dolphin.Injection;
 using System.Net;
 
 namespace Dolphin.Networking

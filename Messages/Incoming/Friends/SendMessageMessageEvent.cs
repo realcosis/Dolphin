@@ -4,7 +4,7 @@ using Dolphin.HabboHotel.Users;
 using Dolphin.Messages.Handler;
 using Dolphin.Messages.Outgoing.Friends;
 using Dolphin.Networking.Client;
-using RC.Common.Injection;
+using Dolphin.Injection;
 
 namespace Dolphin.Messages.Incoming.Friends
 {

@@ -1,9 +1,9 @@
-﻿using RC.Common.Configurations;
-
-namespace Dolphin.Configurations
+﻿namespace Dolphin.Configurations
 {
-    public class Configuration : ConfigurationBase
+    public class Configuration
     {
+        public DatabaseConfiguration? Database { get; set; }
+
         public NetworkConfiguration? Nitro { get; set; }
     }
 }

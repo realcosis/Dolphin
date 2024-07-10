@@ -8,7 +8,7 @@ using Dolphin.Messages.Outgoing.Messenger;
 using Dolphin.Messages.Outgoing.Navigator;
 using Dolphin.Messages.Outgoing.Sounds;
 using Dolphin.Networking.Client;
-using RC.Common.Injection;
+using Dolphin.Injection;
 
 namespace Dolphin.Messages.Incoming.Handshake
 {

@@ -1,4 +1,4 @@
-﻿using RC.Common.Injection;
+﻿using Dolphin.Injection;
 
 namespace Dolphin.ConsoleCommands
 {

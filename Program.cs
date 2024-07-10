@@ -3,12 +3,11 @@ using Dolphin.Configurations;
 using Dolphin.ConsoleCommands;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using RC.Common.Configurations;
 
 var host = new HostBuilder()
 .ConfigureServices((builder, services) =>
 {
-    services.AddConfiguration<Configuration>(ConfigurationTypes.File);
+    services.AddConfiguration();
     services.AddSingleton(builder.Configuration);
     services.AddDolphinServices();
 }).Build();

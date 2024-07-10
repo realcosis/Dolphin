@@ -1,4 +1,4 @@
-﻿using RC.Common.Injection;
+﻿using Dolphin.Injection;
 using System.Collections.Concurrent;
 
 namespace Dolphin.HabboHotel.Events

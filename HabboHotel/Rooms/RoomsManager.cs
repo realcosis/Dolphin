@@ -3,8 +3,7 @@ using Dolphin.HabboHotel.Rooms.Models.Navigators;
 using Dolphin.HabboHotel.Rooms.Mappers;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
-using RC.Common;
-using RC.Common.Injection;
+using Dolphin.Injection;
 using System.Collections.Concurrent;
 
 namespace Dolphin.HabboHotel.Rooms

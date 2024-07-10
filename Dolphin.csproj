@@ -18,10 +18,11 @@
 		<PackageReference Include="DotNetty.Codecs.Http" Version="0.7.6" />
 		<PackageReference Include="DotNetty.Common" Version="0.7.6" />
 		<PackageReference Include="DotNetty.Handlers" Version="0.7.6" />
+		<PackageReference Include="Scrutor" Version="4.2.2" />
 		<PackageReference Include="DotNetty.Transport" Version="0.7.6" />
 		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
-		<PackageReference Include="RealCosis.Common" Version="2.0.2" />
-		<PackageReference Include="RealCosis.Common.DAL" Version="2.0.3" />
+		<PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="8.0.2" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.7" />
 		<PackageReference Include="EFCore.NamingConventions" Version="8.0.3" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="8.0.1" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Console" Version="8.0.0" />

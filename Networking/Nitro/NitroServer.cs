@@ -1,7 +1,6 @@
 ﻿using DotNetty.Transport.Channels;
 using DotNetty.Codecs.Http.WebSockets;
 using DotNetty.Codecs.Http;
-using RC.Pixel.HL.Networking.Nitro.Codec;
 using DotNetty.Handlers.Tls;
 using System.Security.Cryptography.X509Certificates;
 using Microsoft.Extensions.Options;
@@ -13,6 +12,7 @@ using Dolphin.Networking.Decoder;
 using Dolphin.Networking.Encoder;
 using Dolphin.HabboHotel.Events;
 using Dolphin.Networking.Handler;
+using Dolphin.Networking.Nitro.Codec;
 
 namespace Dolphin.Networking.Nitro
 {

@@ -1,10 +1,11 @@
 ﻿using Dolphin.DAL.Entities;
 using Dolphin.DAL.Procedures;
 using Dolphin.HabboHotel.Items.Mapper;
+using Dolphin.HabboHotel.Users.Mappers;
 using Dolphin.HabboHotel.Users.Models;
 using Dolphin.Util;
 
-namespace Dolphin.HabboHotel.Users.Mapper
+namespace Dolphin.HabboHotel.Users.Mappers
 {
     internal static class UserMappers
     {

@@ -2,17 +2,16 @@
 using Dolphin.HabboHotel.Events;
 using Dolphin.HabboHotel.Events.Models;
 using Dolphin.HabboHotel.Groups.Mappers;
-using Dolphin.HabboHotel.Users.Mapper;
 using Dolphin.HabboHotel.Users.Models;
 using Dolphin.Util;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
-using RC.Common.Injection;
+using Dolphin.Injection;
 using System.Collections.Concurrent;
 using Dolphin.HabboHotel.Rooms.Mappers;
 using Dolphin.Messages.Outgoing.Messenger;
-using RC.Common;
 using Microsoft.EntityFrameworkCore.ChangeTracking.Internal;
+using Dolphin.HabboHotel.Users.Mappers;
 
 namespace Dolphin.HabboHotel.Users
 {

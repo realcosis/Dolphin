@@ -3,7 +3,7 @@ using DotNetty.Codecs.Http.WebSockets;
 using DotNetty.Codecs;
 using DotNetty.Transport.Channels;
 
-namespace RC.Pixel.HL.Networking.Nitro.Codec;
+namespace Dolphin.Networking.Nitro.Codec;
 
 public class WebSocketFrameCodec : MessageToMessageCodec<WebSocketFrame, IByteBuffer>
 {

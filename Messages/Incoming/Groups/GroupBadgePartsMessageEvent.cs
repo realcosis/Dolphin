@@ -2,7 +2,7 @@
 using Dolphin.Messages.Handler;
 using Dolphin.Messages.Outgoing.Groups;
 using Dolphin.Networking.Client;
-using RC.Common.Injection;
+using Dolphin.Injection;
 
 namespace Dolphin.Messages.Incoming.Groups
 {

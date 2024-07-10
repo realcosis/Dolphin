@@ -3,10 +3,12 @@ using Dolphin.Backgrounds;
 using Dolphin.DAL;
 using Dolphin.DAL.Enums;
 using Dolphin.HabboHotel.Items.Models;
+using Dolphin.Injection;
 using Dolphin.Messages.Outgoing;
+using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using RC.Common.Injection;
 using System.ComponentModel;
 using System.Linq.Expressions;
 using System.Reflection;
@@ -57,6 +59,9 @@ namespace Dolphin
 
             return services;
         }
+
+        public static void ConfigureMySQL(this DbContextOptionsBuilder builder, string connectionString, Action<MySqlDbContextOptionsBuilder>? options = null)
+            => builder.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString), options);
 
         public static IMappingExpression<E, R> MapProperties<E, R>(this IMappingExpression<E, R> mappingExpression, params (Expression<Func<R, object>> destinationMember, Expression<Func<E, object>> sourceMember)[] properties)
         {

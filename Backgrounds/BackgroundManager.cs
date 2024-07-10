@@ -1,5 +1,5 @@
 ﻿using Dolphin.Backgrounds.Tasks;
-using RC.Common.Injection;
+using Dolphin.Injection;
 using System.Collections.Concurrent;
 
 namespace Dolphin.Backgrounds

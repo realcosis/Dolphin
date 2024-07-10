@@ -3,8 +3,7 @@ using Dolphin.HabboHotel.Groups.Models;
 using Dolphin.HabboHotel.Groups.Mappers;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
-using RC.Common;
-using RC.Common.Injection;
+using Dolphin.Injection;
 using System.Collections.Concurrent;
 
 namespace Dolphin.HabboHotel.Groups

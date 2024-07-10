@@ -1,8 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using System.Collections.Concurrent;
-using RC.Common;
-using RC.Common.Injection;
+using Dolphin.Injection;
 using Dolphin.DAL;
 using Dolphin.HabboHotel.Catalogs.Models;
 using Dolphin.HabboHotel.Catalogs.Mapper;
@@ -10,7 +9,7 @@ using Dolphin.Networking.Client;
 using Dolphin.DAL.Entities;
 using Dolphin.Messages.Outgoing.Inventory.Furni;
 using Dolphin.Messages.Outgoing.Catalogs;
-using Dolphin.HabboHotel.Users.Mapper;
+using Dolphin.HabboHotel.Users.Mappers;
 
 namespace Dolphin.HabboHotel.Catalogs
 {
