@@ -7,7 +7,7 @@ using Microsoft.Extensions.Logging;
 
 namespace Dolphin
 {        
-    public class DolphinBuilder(ILogger<DolphinBuilder> logger, IEmulator emulator) : IHostedService
+    public class DolphinBuilder(IEmulator emulator) : IHostedService
     {
         public static IHostBuilder CreateDolphinBuilder(string[] args)
             => new HostBuilder()
