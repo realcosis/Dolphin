@@ -6,8 +6,10 @@ namespace Dolphin.HabboHotel.Events
     {
         ConcurrentDictionary<string, Func<object, Task>> Events { get; }
 
-        Task RegisterListener(string eventType, Func<object, Task> listener);
+        void RegisterListener(string eventType, Func<object, Task> listener);
 
         Task TriggerEvent(string eventType, object eventData);
+
+        void UnregisterListener(string eventType);
     }
 }

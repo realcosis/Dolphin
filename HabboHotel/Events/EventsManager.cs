@@ -8,12 +8,8 @@ namespace Dolphin.HabboHotel.Events
     {
         ConcurrentDictionary<string, Func<object, Task>> IEventsManager.Events { get; } = [];
 
-        async Task IEventsManager.RegisterListener(string eventType, Func<object, Task> listener)
-        {
-            await Task.Yield();
-
-            ((IEventsManager)this).Events.AddOrUpdate(eventType, listener, (key, existingListener) => existingListener + listener);
-        }
+        void IEventsManager.RegisterListener(string eventType, Func<object, Task> listener)
+            => ((IEventsManager)this).Events.AddOrUpdate(eventType, listener, (key, existingListener) => existingListener + listener);
 
         async Task IEventsManager.TriggerEvent(string eventType, object eventData)
         {
@@ -21,5 +17,8 @@ namespace Dolphin.HabboHotel.Events
                 if (listener != default)
                     await listener(eventData);
         }
+
+        void IEventsManager.UnregisterListener(string eventType)
+            => ((IEventsManager)this).Events.TryRemove(eventType, out var _);
     }
 }

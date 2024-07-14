@@ -1,5 +1,4 @@
 ﻿using AutoMapper;
-using Dolphin.Backgrounds;
 using Dolphin.DAL;
 using Dolphin.DAL.Enums;
 using Dolphin.Injection;
@@ -7,7 +6,6 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using System.ComponentModel;
 using System.Linq.Expressions;
 using System.Reflection;
 
@@ -42,8 +40,6 @@ namespace Dolphin
             foreach (var task in tasks)
                 services.RegisterService(task, assembly);
 
-            services.AddHostedService<Worker>();
-
             services.AddDbContext<DolphinDbContext>(ServiceLifetime.Transient);
 
             services.AddAutoMapper(assembly);
@@ -74,18 +70,6 @@ namespace Dolphin
         {
             var config = new MapperConfiguration(cfg => cfg.CreateMap<E, R>().MapProperties(properties));
             return config.CreateMapper().Map<R>(@object);
-        }
-
-        internal static string GetDescription(this Enum enumValue)
-        {
-            var fieldInfo = enumValue.GetType().GetField(enumValue.ToString());
-
-            if (fieldInfo == default)
-                return string.Empty;
-
-            var descriptionAttributes = (DescriptionAttribute[])fieldInfo.GetCustomAttributes(typeof(DescriptionAttribute), false);
-
-            return descriptionAttributes.Length > 0 ? descriptionAttributes[0].Description : enumValue.ToString();
         }
 
         internal static InteractionTypes GetTypeFromString(this string interactonType)
@@ -261,7 +245,7 @@ namespace Dolphin
                 "rareseed" => InteractionTypes.rareseed,
                 "crackable" => InteractionTypes.crackable,
                 "votecount" => InteractionTypes.votecount,
-                _ => InteractionTypes.none,
+                _ => InteractionTypes.none
             };
         }
     }

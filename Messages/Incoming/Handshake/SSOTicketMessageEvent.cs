@@ -9,11 +9,13 @@ using Dolphin.Messages.Outgoing.Navigator;
 using Dolphin.Messages.Outgoing.Sounds;
 using Dolphin.Networking.Client;
 using Dolphin.Injection;
+using Dolphin.HabboHotel.Events.Models;
+using Dolphin.HabboHotel.Events;
 
 namespace Dolphin.Messages.Incoming.Handshake
 {
     [Singleton]
-    class SSOTicketMessageEvent(IUsersManager usersManager, IAchievementsManager achievementsManager) : IIncomingHandler
+    class SSOTicketMessageEvent(IUsersManager usersManager, IAchievementsManager achievementsManager, IEventsManager eventsManager) : IIncomingHandler
     {
         async Task IIncomingHandler.Handle(ClientSession client, IncomingPacket packet)
         {
@@ -43,6 +45,12 @@ namespace Dolphin.Messages.Incoming.Handshake
                 await client.Send(new AvailabilityStatusMessageComposer());
                 await client.Send(new FriendListUpdateMessageComposer(default, default, 1, client.Habbo.Friends));
                 await client.Send(new BadgeDefinitionsMessageComposer([.. achievementsManager.Achievements.Values]));
+
+                await eventsManager.TriggerEvent(EventTypes.USER_CONNECTED, new UserDisconnectedEvent
+                {
+                    UserId = client.Habbo!.User!.Id,
+                    Habbo = habbo
+                });
             }
         }
     }

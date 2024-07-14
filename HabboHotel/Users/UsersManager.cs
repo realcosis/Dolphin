@@ -243,7 +243,7 @@ namespace Dolphin.HabboHotel.Users
 
                 ((IUsersManager)this).Users.TryAdd(habbo.User!.Id, habbo);
 
-                await eventsManager.RegisterListener(EventTypes.USER_DISCONNECTED, async (eventData) => await OnDisconnect((UserDisconnectedEvent)eventData));
+                eventsManager.RegisterListener(EventTypes.USER_DISCONNECTED, async (eventData) => await OnDisconnect((UserDisconnectedEvent)eventData));
 
                 return habbo;
             }

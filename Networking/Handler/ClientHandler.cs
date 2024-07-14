@@ -38,7 +38,8 @@ namespace Dolphin.Networking.Handler
                 if (client.Habbo != default && client.Habbo!.User != default)
                     await eventsManager.TriggerEvent(EventTypes.USER_DISCONNECTED, new UserDisconnectedEvent
                     {
-                        UserId = client.Habbo!.User!.Id
+                        UserId = client.Habbo!.User!.Id,
+                        Habbo = client.Habbo
                     });
                 await context.CloseAsync();
                 clients.TryRemove(context.Channel.Id, out _);

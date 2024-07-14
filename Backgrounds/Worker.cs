@@ -26,18 +26,9 @@ namespace Dolphin.Backgrounds
         }
 
         protected override async Task ExecuteAsync(CancellationToken cancellationToken)
-        {
-            logger.LogInformation($"Worker has been loaded");
-
-            await BackgroundProcessing(cancellationToken);
-        }
+            => await BackgroundProcessing(cancellationToken);
 
         public override async Task StopAsync(CancellationToken cancellationToken)
-        {
-            await Task.Run(() =>
-            {
-                logger.LogInformation("Worker has been unloaded");
-            }, cancellationToken);
-        }
+            => await base.StopAsync(cancellationToken);
     }
 }
