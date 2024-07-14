@@ -2,19 +2,9 @@
 {
     public static class DolphinTables
     {
-        public const string SoundBoardCategories = "bobba_soundboard_categories";
-
-        public const string SoundBoardSounds = "bobba_soundboard_sounds";
-
-        public const string SoundBoardUsers = "bobba_soundboard_users";
-
         public const string Users = "users";
 
         public const string UserTickets = "user_tickets";
-
-        public const string CMSUserTitles = "cms_usertitles";
-
-        public const string UserTitles = "user_titles";
 
         public const string UserBadges = "user_badges";
 
